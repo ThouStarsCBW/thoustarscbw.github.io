@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>长 相 思</title><meta name="author" content="Thoustars"><meta name="copyright" content="Thoustars"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="长 相 思">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="长 相 思">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/head.jpg">
+<meta property="article:author" content="Thoustars">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/head.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '长 相 思',
+  isHighlightShrink: true,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (true) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-image: url(/imga/bg.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/vlog/"><i class="fa-fw fas fa-vlog"></i><span> Vlog</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/img/mainbg.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">长 相 思</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/vlog/"><i class="fa-fw fas fa-vlog"></i><span> Vlog</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">长 相 思</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/ThouStarsCBW" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:3569660971@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2025/10/06/20251006/" title="新的岗位"><img class="post-bg" src="/imga/autumn4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新的岗位"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/10/06/20251006/" title="新的岗位">新的岗位</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-10-05T16:00:00.000Z" title="发表于 2025-10-06 00:00:00">2025-10-06</time></span></div><div class="content">教学楼服务队上岗体验        照片分享晋启新程，筑梦金秋    国庆假期过去了一多半，连着下了很多场雨  阅读分享 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/09/28/20250928/" title="小组例会"><img class="post-bg" src="/imga/autumn3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小组例会"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/09/28/20250928/" title="小组例会">小组例会</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-09-27T16:00:00.000Z" title="发表于 2025-09-28 00:00:00">2025-09-28</time></span></div><div class="content">小组例会上，我们进行了轮岗以及分工   上午参加完太原理工大学那场人潮涌动的双选会后，我匆匆赶回学校，参加了小组的例行会议。 这次会议我们讨论了分工以及轮岗事宜。在自我介绍环节，我再次分享了那个关于建立“上岗心得”网站的想法——希望用一方数字天地，记录下我们在这里每一次的相遇与协作。随后进入打扫分工阶段，我选择了擦黑板和倒垃圾的任务。会议最后，我们一起确认了国庆期间的轮岗安排。 走在回宿舍的路上，我不禁开始期待起接下来与大家共同工作的日子。想到即将与这样一群真诚的伙伴并肩协作，在简单的劳动中彼此支持、一同成长，这份憧憬让秋日的午后也显得格外明亮。相信这段勤工助学的旅程，一定会成为我大学生活中一段温暖而珍贵的记忆。    照片分享晋启新程，筑梦金秋    参加“山西省2026届高校毕业生校园招聘活动启动仪式”暨大学城（太原理工大学）2025年秋季大型双选会。  阅读分享 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2025/09/27/20250927/" title="岗前培训"><img class="post-bg" src="/imga/autumn2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="岗前培训"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/09/27/20250927/" title="岗前培训">岗前培训</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-09-26T16:00:00.000Z" title="发表于 2025-09-27 00:00:00">2025-09-27</time></span></div><div class="content">参加勤工助学教学楼服务队岗前培训会！   我参加了服务队的岗前培训会。会上，队长仔细向我们强调了各项注意事项，尤其是上岗时间等关键要求。最后是分组环节，我希望通过这次勤工助学，认识更多的新朋友。    照片分享岗前培训会    阅读分享这次，我将给大家分享一本书，名叫：   《高效能人士的七个习惯》  关于作者：史蒂芬·柯维（Stephen R. Covey）美国著名管理学大师，入选美《时代周刊》“影响美国历史进程的25位人物之一”，是美国家喻户晓的启蒙家。柯维在领导理论，家庭与人际关系，个人管理等领域久负盛名。在美国乃至全世界，其思想成就，绝不亚于杰克·韦尔奇、卡内基、巴菲特、德鲁克中的任何一位。天地之大，愈衬得人如蝼蚁，踽踽独行数十年，仓皇期间。有限的生命，如何装下诸多丰盛的理想？从为自己的每一个选择负责开始，这本书可以循序渐进地教我们掌握自己的人生。 七个习惯：这七个习惯是什么？ 积极主动（个人领域） 以终为始（个人领域） 要事第一（个人领域） 双赢思维 知彼解己 统合综效 不断更新   </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/09/17/20250917/" title="幸运的我"><img class="post-bg" src="/imga/autumn1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="幸运的我"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/09/17/20250917/" title="幸运的我">幸运的我</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-09-16T16:00:00.000Z" title="发表于 2025-09-17 00:00:00">2025-09-17</time></span></div><div class="content">我报名了勤工助学的教学楼服务队！ 10月的天气还带着些许暖意，我报名加入了教学楼勤工助学服务队。之前一直在校园卫生队工作，这次转战教学楼，也算是个新人，心里不免有些期待。 更让我开心的是，我的“幸运”舍友在抽签中抽到了派岗任务，这意味着国庆期间终于有人能在宿舍陪我了。  </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/12/24/12%E6%9C%8824%E6%97%A5%E8%AE%B0/" title="大合照"><img class="post-bg" src="/img/winter55.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大合照"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/12/24/12%E6%9C%8824%E6%97%A5%E8%AE%B0/" title="大合照">大合照</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-23T16:00:00.000Z" title="发表于 2024-12-24 00:00:00">2024-12-24</time></span></div><div class="content">合照新南区2024年12月照    </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/12/23/12%E6%9C%8823%E6%97%A5%E8%AE%B0/" title="掌控时间"><img class="post-bg" src="/img/winter34.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="掌控时间"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/12/23/12%E6%9C%8823%E6%97%A5%E8%AE%B0/" title="掌控时间">掌控时间</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-22T16:00:00.000Z" title="发表于 2024-12-23 00:00:00">2024-12-23</time></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/12/21/12%E6%9C%8821%E6%97%A5%E8%AE%B0/" title="我的分享"><img class="post-bg" src="/img/winter27.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我的分享"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/12/21/12%E6%9C%8821%E6%97%A5%E8%AE%B0/" title="我的分享">我的分享</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-20T16:00:00.000Z" title="发表于 2024-12-21 00:00:00">2024-12-21</time></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/12/20/12%E6%9C%8820%E6%97%A5%E8%AE%B0/" title="难得悠闲"><img class="post-bg" src="/img/winter30.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="难得悠闲"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/12/20/12%E6%9C%8820%E6%97%A5%E8%AE%B0/" title="难得悠闲">难得悠闲</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-19T16:00:00.000Z" title="发表于 2024-12-20 00:00:00">2024-12-20</time></span></div><div class="content">暂时停下脚步   今天终于有一段难得的悠闲时光。 从英语四级考试开始，我就一直在忙碌，Java大作业，数据库期末，课设，学习通作业，阶段测验，大创立项答辩等等，简直不要太恐怖。 昨天晚上爆肝到了三点才睡的觉。早上六点起床，幸好我的闹铃声音大，在舍友的问候声中我终于醒了过来，没有上岗迟到。 现在是晚上，我终于把它们按时完成了。坐在电脑前，回想过去几天，唯一的悠闲时光就是在早上勤工助学的过程中。 我可以远离手机，远离各种通知的轰炸，真真静下心来，放空大脑，认真打扫，让自己在紧张的考试周放松下来。  人无远虑，必有近忧。  没有一个好的规划，在期末简直就是噩梦。还有三天就要计组期末考试，我很后悔我之前没有好好学习。 加油，在这个周末创造奇迹！！！    照片分享我们   感谢 组长大大...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/12/14/12%E6%9C%8814%E6%97%A5%E8%AE%B0/" title="CET-4"><img class="post-bg" src="/img/winter32.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CET-4"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/12/14/12%E6%9C%8814%E6%97%A5%E8%AE%B0/" title="CET-4">CET-4</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-13T16:00:00.000Z" title="发表于 2024-12-14 00:00:00">2024-12-14</time></span></div><div class="content">四级   今天就要四级考试了（我还没开始做题，丸辣！ 昨晚看了一晚上作文，早上差点没醒来。给舍友闹醒了，我还在熟睡，感谢舍友专程跑过来给我摇醒，非常感谢。 感觉走在上岗的路上眼睛都没睁开，全程梦游，人在路上走，魂在床上睡，直到点完名后才清醒了。  Don’t put off till tomorrow what should be done today....</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/12/12/12%E6%9C%8812%E6%97%A5%E8%AE%B0/" title="合照"><img class="post-bg" src="/img/winter37.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="合照"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/12/12/12%E6%9C%8812%E6%97%A5%E8%AE%B0/" title="合照">合照</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-11T16:00:00.000Z" title="发表于 2024-12-12 00:00:00">2024-12-12</time></span></div><div class="content">Take A Photo   今天组长要给我们拍合照。非常幸运的是今天区域的垃圾也很少，所以速战速决！ 我是个强迫症哈哈哈哈哈，所以我在拍完第一张照片后我站在正中间又拍了一张。不管好不好看，反正对称了，舒坦！ 说实话，我到现在还无法匹配本人和名字，我已经问过好多次了。 我比较脸盲，如果路上碰到和我打招呼我没回应记得给我一拳，这样我包记住的。 最近迷上了几首歌，千辛万苦终于配置好了音乐标签，那就分享给大家吧！  最后，今天双十二广顺全场八五折，我要去进货啦！！！    照片分享我们小组的合照    感谢 组长大大...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Thoustars</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/ThouStarsCBW" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:3569660971@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">这是我们的回忆！！！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/10/06/20251006/" title="新的岗位"><img src="/imga/autumn4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新的岗位"/></a><div class="content"><a class="title" href="/2025/10/06/20251006/" title="新的岗位">新的岗位</a><time datetime="2025-10-05T16:00:00.000Z" title="发表于 2025-10-06 00:00:00">2025-10-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/28/20250928/" title="小组例会"><img src="/imga/autumn3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="小组例会"/></a><div class="content"><a class="title" href="/2025/09/28/20250928/" title="小组例会">小组例会</a><time datetime="2025-09-27T16:00:00.000Z" title="发表于 2025-09-28 00:00:00">2025-09-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/27/20250927/" title="岗前培训"><img src="/imga/autumn2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="岗前培训"/></a><div class="content"><a class="title" href="/2025/09/27/20250927/" title="岗前培训">岗前培训</a><time datetime="2025-09-26T16:00:00.000Z" title="发表于 2025-09-27 00:00:00">2025-09-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/17/20250917/" title="幸运的我"><img src="/imga/autumn1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="幸运的我"/></a><div class="content"><a class="title" href="/2025/09/17/20250917/" title="幸运的我">幸运的我</a><time datetime="2025-09-16T16:00:00.000Z" title="发表于 2025-09-17 00:00:00">2025-09-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/24/12%E6%9C%8824%E6%97%A5%E8%AE%B0/" title="大合照"><img src="/img/winter55.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="大合照"/></a><div class="content"><a class="title" href="/2024/12/24/12%E6%9C%8824%E6%97%A5%E8%AE%B0/" title="大合照">大合照</a><time datetime="2024-12-23T16:00:00.000Z" title="发表于 2024-12-24 00:00:00">2024-12-24</time></div></div></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">17</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-10-21T11:42:43.663Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/mainbg.jpg);"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2025 By Thoustars</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.3</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["悟已往之不谏，知来者之可追","长相思·春江楼","春江楼，春江休。明朝几度赴学绉，锦书系离柳。","阶前照，阶前迢。兰缕寒萍各萧潇，君卿立凌高。"])
+  } else {
+    document.getElementById("subtitle").textContent = "悟已往之不谏，知来者之可追"
+  }
+}
+typedJSFn.run(subtitleType)</script></div><div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><script id="canvas_nest" defer="defer" color="255,255,255" opacity="1" zIndex="-1" count="100" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="true" data-text="❤富强❤,❤民主❤,❤文明❤,❤和谐❤,❤自由❤,❤平等❤,❤公正❤,❤法治❤,❤爱国❤,❤敬业❤,❤诚信❤,❤友善❤" data-fontsize="25px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script>(() => {
+  const destroyAplayer = () => {
+    if (window.aplayers) {
+      for (let i = 0; i < window.aplayers.length; i++) {
+        if (!window.aplayers[i].options.fixed) {
+          window.aplayers[i].destroy()
+        }
+      }
+    }
+  }
+
+  const runMetingJS = () => {
+    typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+  }
+
+  btf.addGlobalFn('pjaxSend', destroyAplayer, 'destroyAplayer')
+  btf.addGlobalFn('pjaxComplete', loadMeting, 'runMetingJS')
+})()</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      window.location.href = e.request.responseURL
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body></html>
